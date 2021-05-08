@@ -5,14 +5,16 @@
     <title>Pwflix</title>
   </head>
   <body>
-    <form id="searchForm" method="GET" action="/search">
+    <form id="searchForm" method="GET" action="/movies/search">
       <input name="search" type="text" value="<%= searchStr %>" />
       <input type="submit" value="Filtrar" />
     </form>
     <div id="root">
       <% if(movies != null ) { for (var m of movies){%>
       <div>
-        <h1><%= m.Title %></h1>
+        <h1>
+          <a href="/movies/getDetails/<%= m.Title %>"><%= m.Title %></a>
+        </h1>
         <img src="<%= m.Poster %>" />
       </div>
       <% } } %>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pwflix</title>
+  </head>
+  <body>
+    <div id="root">
+      <% if(movie != null ) {%>
+      <div>
+        <h1><%= movie.Title %> - [<%=movie.Year%>]</h1>
+        <p><%= movie.Plot %></p>
+        <img src="<%= movie.Poster %>" />
+        <div>
+          <small><%= movie.Genre %></small><br />
+          <small><%= movie.Actors %></small><br />
+          <small><%= movie.Awards %></small><br />
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
