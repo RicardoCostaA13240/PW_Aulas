@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pwflix</title>
+  </head>
+  <body>
+    <form id="searchForm" method="GET" action="/search">
+      <input name="search" type="text" value="<%= searchStr %>" />
+      <input type="submit" value="Filtrar" />
+    </form>
+    <div id="root">
+      <% if(movies != null ) { for (var m of movies){%>
+      <div>
+        <h1><%= m.Title %></h1>
+        <img src="<%= m.Poster %>" />
+      </div>
+      <% } } %>
+    </div>
+  </body>
+</html>
